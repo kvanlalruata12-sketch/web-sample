@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My OG — Hemp Bags, Goods &amp; Accessories | MyOriginal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@1,9..144,400..600&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1E1B14;
+    --ink-2:#2A2517;
+    --ink-3:#332C1B;
+    --cream:#F1E7D3;
+    --paper:#FBF7EC;
+    --tan:#B6905B;
+    --tan-dark:#8E6B3E;
+    --moss:#5C6B44;
+    --clay:#A1532A;
+    --text:#2B2618;
+    --text-soft:#6B6048;
+    --on-dark:#EFE7D6;
+    --on-dark-soft:#C7BCA0;
+    --line:rgba(241,231,211,0.14);
+    --line-light:rgba(43,38,24,0.13);
+    --radius:18px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{margin:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  .eyebrow{
+    font-family:'Work Sans',sans-serif;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:11.5px;
+  }
+  .display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;}
+  .quote-font{font-family:'Fraunces',serif;font-style:italic;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 22px 13px 26px;
+    border-radius:999px;
+    font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid currentColor;
+    transition:transform .25s ease, background .25s ease, color .25s ease;
+    cursor:pointer;background:none;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-light{color:var(--ink);border-color:var(--ink);}
+  .btn-light:hover{background:var(--ink);color:var(--cream);}
+  .btn-dark{color:var(--cream);border-color:var(--cream);}
+  .btn-dark:hover{background:var(--cream);color:var(--ink);}
+  .btn-solid{background:var(--tan);color:var(--ink);border-color:var(--tan);}
+  .btn-solid:hover{background:var(--tan-dark);border-color:var(--tan-dark);color:var(--paper);}
+  .arrow-dot{
+    width:22px;height:22px;border-radius:50%;border:1px solid currentColor;
+    display:inline-flex;align-items:center;justify-content:center;flex:none;
+  }
+  .arrow-dot svg{width:10px;height:10px;}
+
+  /* ---------- Announcement bar ---------- */
+  .announce{
+    background:var(--ink);
+    color:var(--on-dark-soft);
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.05em;
+    padding:9px 14px;
+    border-bottom:1px solid var(--line);
+  }
+  .announce strong{color:var(--tan);font-weight:700;}
+
+  /* ---------- Header / nav ---------- */
+  header.site{
+    background:var(--ink);
+    position:sticky;top:0;z-index:50;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;
+    max-width:var(--maxw);margin:0 auto;
+    gap:18px;
+  }
+  .logo-link{display:flex;align-items:center;gap:10px;flex:none;}
+  .logo-link img{height:38px;width:auto;}
+  nav.links{display:flex;gap:30px;list-style:none;margin:0;padding:0;}
+  nav.links a{
+    font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--on-dark-soft);
+    position:relative;padding-bottom:4px;
+  }
+  nav.links a:hover{color:var(--tan);}
+  .nav-icons{display:flex;align-items:center;gap:18px;color:var(--on-dark-soft);flex:none;}
+  .nav-icons svg{width:19px;height:19px;}
+  .nav-icons button{background:none;border:none;color:inherit;cursor:pointer;padding:0;display:flex;}
+  #menuToggle{display:none;}
+  .mobile-drawer{
+    display:none;
+    background:var(--ink-2);
+    border-top:1px solid var(--line);
+    padding:8px 20px 18px;
+  }
+  .mobile-drawer.open{display:block;}
+  .mobile-drawer a{
+    display:block;padding:11px 0;
+    font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--on-dark-soft);
+    border-bottom:1px solid var(--line);
+  }
+
+  @media (max-width:880px){
+    nav.links{display:none;}
+    #menuToggle{display:flex;}
+  }
+
+  /* ---------- Hero (full-bleed background image, centered content) ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    color:var(--on-dark);
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background-image:url('https://www.myog.in/cdn/shop/files/Artboard4_ee51ac06-6be8-483a-950f-f1f5941906fe.webp?v=1726314793&width=1600');
+    background-size:cover;
+    background-position:center top;
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(135deg, rgba(20,18,12,.78) 0%, rgba(20,18,12,.55) 50%, rgba(20,18,12,.72) 100%);
+  }
+  .hero .wrap{
+    position:relative;z-index:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:100px 24px 80px;
+    width:100%;
+  }
+  .hero-badge{
+    width:72px;height:72px;border-radius:50%;
+    background:rgba(251,247,236,.12);backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:24px;border:1px solid rgba(241,231,211,.3);
+  }
+  .hero-badge img{height:44px;width:auto;}
+  .hero h1{
+    font-size:clamp(48px,10vw,96px);
+    line-height:.92;
+    color:var(--paper);
+    max-width:800px;
+  }
+  .hero h1 .accent{color:var(--tan);}
+  .hero .sub{
+    font-size:clamp(13px,1.8vw,17px);
+    font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    margin-top:16px;color:var(--on-dark-soft);
+  }
+  .hero .sub span{color:var(--tan);}
+  .hero .tagline{
+    margin-top:18px;
+    font-size:clamp(16px,2.2vw,20px);
+    max-width:500px;
+    color:var(--on-dark);
+    line-height:1.6;
+  }
+  .hero .cta-row{
+    display:flex;align-items:center;justify-content:center;
+    gap:16px;margin-top:32px;flex-wrap:wrap;
+  }
+  .hero-bestseller{
+    display:inline-block;
+    background:var(--clay);color:var(--paper);
+    font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;
+    margin-bottom:20px;
+  }
+
+  /* ---------- Trust bar ---------- */
+  .trust-bar{
+    background:var(--ink-3);
+    color:var(--on-dark-soft);
+    display:flex;align-items:center;justify-content:center;
+    flex-wrap:wrap;gap:0;
+    padding:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .trust-bar-item{
+    display:flex;align-items:center;gap:10px;
+    padding:18px 28px;
+    font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    border-right:1px solid var(--line);
+    flex:1;min-width:180px;justify-content:center;
+    text-align:center;
+  }
+  .trust-bar-item:last-child{border-right:none;}
+  .trust-bar-item b{color:var(--tan);font-size:14px;}
+  .trust-bar-item svg{width:20px;height:20px;color:var(--tan);flex:none;}
+  @media (max-width:640px){
+    .trust-bar{flex-direction:column;}
+    .trust-bar-item{border-right:none;border-bottom:1px solid var(--line);width:100%;padding:14px 20px;}
+    .trust-bar-item:last-child{border-bottom:none;}
+  }
+
+  /* ---------- Section heading helper ---------- */
+  .section-head{
+    text-align:center;
+    margin-bottom:38px;
+  }
+  .section-head .eyebrow{color:var(--tan-dark);}
+  .section-head h2{
+    font-size:clamp(28px,4vw,42px);
+    margin-top:8px;
+  }
+  .rule-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;}
+  .rule{height:1px;width:46px;background:var(--line-light);}
+  .light .rule{background:var(--line);}
+
+  /* ---------- About (slider) ---------- */
+  .about{padding:84px 0 56px;background:var(--paper);overflow:hidden;}
+  .about-slider-outer{
+    position:relative;
+    overflow:hidden;
+  }
+  .about-track{
+    display:flex;
+    transition:transform .45s cubic-bezier(.4,0,.2,1);
+  }
+  .about-slide{
+    min-width:100%;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:46px;
+    align-items:center;
+    padding:0 0 10px;
+  }
+  .about-card{
+    background:var(--cream);
+    border-radius:var(--radius);
+    padding:38px 34px;
+  }
+  .about-card .eyebrow{color:var(--clay);}
+  .about-card h2{font-size:clamp(22px,3vw,30px);margin:10px 0 16px;}
+  .about-card p{font-size:15.5px;line-height:1.7;color:var(--text-soft);margin:0 0 16px;}
+  .about-card p:last-of-type{margin-bottom:22px;}
+  .about-photo{
+    border-radius:var(--radius);overflow:hidden;aspect-ratio:5/4;
+  }
+  .about-photo img{width:100%;height:100%;object-fit:cover;}
+
+  .about-nav{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin-top:32px;
+  }
+  .about-nav button{
+    width:40px;height:40px;border-radius:50%;
+    border:1.5px solid var(--line-light);background:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;color:var(--text);transition:all .2s ease;
+  }
+  .about-nav button:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+  .about-nav button svg{width:16px;height:16px;}
+  .about-dots{display:flex;gap:8px;align-items:center;}
+  .about-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--line-light);border:none;padding:0;cursor:pointer;
+    transition:background .25s,transform .25s;
+  }
+  .about-dot.active{background:var(--tan);transform:scale(1.3);}
+
+  @media (max-width:880px){
+    .about-slide{grid-template-columns:1fr;gap:24px;}
+    .about-photo{order:-1;aspect-ratio:16/9;}
+  }
+
+  .perks{
+    margin-top:56px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border:1px solid var(--line-light);border-radius:var(--radius);overflow:hidden;
+  }
+  .perk{
+    padding:26px 18px;text-align:center;
+    border-right:1px solid var(--line-light);
+    background:var(--paper);
+  }
+  .perk:last-child{border-right:none;}
+  .perk svg{width:26px;height:26px;color:var(--clay);margin-bottom:10px;}
+  .perk p{margin:0;font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text);}
+  .perk span{display:block;font-size:11.5px;color:var(--text-soft);font-weight:400;text-transform:none;letter-spacing:0;margin-top:4px;}
+  @media (max-width:760px){
+    .perks{grid-template-columns:repeat(2,1fr);}
+    .perk{border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light);}
+    .perk:nth-child(2n){border-right:none;}
+  }
+
+  /* ---------- Story (dark full bleed) ---------- */
+  .story{
+    position:relative;color:var(--on-dark);
+    padding:110px 0;
+    background:#14120c;
+  }
+  .story-bg{
+    position:absolute;inset:0;
+    background-size:cover;background-position:center;
+    opacity:.34;
+  }
+  .story-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,18,12,.55), rgba(20,18,12,.92));
+  }
+  .story .wrap{position:relative;max-width:760px;text-align:center;}
+  .story .eyebrow{color:var(--tan);}
+  .story h2{font-size:clamp(22px,3.4vw,30px);color:var(--paper);margin:14px 0 26px;}
+  .story blockquote{
+    margin:0 0 28px;
+    font-size:clamp(17px,2.4vw,21px);
+    line-height:1.75;
+    color:var(--on-dark);
+  }
+  .story .motto{
+    font-family:'Fraunces',serif;font-style:italic;
+    font-size:clamp(20px,3vw,26px);
+    color:var(--tan);
+    margin-bottom:30px;
+  }
+
+  /* ---------- Process (signature element) ---------- */
+  .process{background:var(--ink);color:var(--on-dark);padding:92px 0 100px;}
+  .process .section-head .eyebrow{color:var(--tan);}
+  .process .section-head h2{color:var(--paper);}
+  .process .section-head p{color:var(--on-dark-soft);max-width:540px;margin:14px auto 0;font-size:15px;line-height:1.6;}
+  .stitch-row{
+    display:grid;grid-template-columns:repeat(6,1fr);
+    gap:0;position:relative;margin-top:50px;
+  }
+  .stitch-row::before{
+    content:"";position:absolute;top:21px;left:4%;right:4%;height:0;
+    border-top:2px dashed var(--tan-dark);
+    z-index:0;
+  }
+  .step{
+    position:relative;z-index:1;
+    padding:0 12px;text-align:center;
+  }
+  .step .node{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--tan);
+    color:var(--tan);font-family:'Anton',sans-serif;font-size:16px;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 18px;
+  }
+  .step h3{
+    font-size:13.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--paper);margin-bottom:8px;
+  }
+  .step p{font-size:12.5px;line-height:1.6;color:var(--on-dark-soft);margin:0;}
+  @media (max-width:880px){
+    .stitch-row{
+      grid-template-columns:1fr;gap:30px;
+    }
+    .stitch-row::before{
+      top:4%;bottom:4%;left:21px;right:auto;width:0;height:auto;
+      border-top:none;border-left:2px dashed var(--tan-dark);
+    }
+    .step{display:flex;align-items:flex-start;gap:18px;text-align:left;padding:0;}
+    .step .node{margin:0;flex:none;}
+  }
+
+  /* ---------- Categories ---------- */
+  .categories{padding:90px 0;background:var(--paper);}
+  .cat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .cat-card{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:3/4;
+    background:var(--ink-2);
+    display:block;
+  }
+  .cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .cat-card:hover img{transform:scale(1.07);}
+  .cat-card::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,18,12,0) 35%, rgba(20,18,12,.85) 100%);
+  }
+  .cat-info{
+    position:absolute;left:0;right:0;bottom:0;padding:18px;color:var(--paper);z-index:2;
+  }
+  .cat-info h3{font-size:15px;letter-spacing:.02em;margin-bottom:8px;}
+  .cat-info span{
+    font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:6px;color:var(--tan);
+  }
+  @media (max-width:880px){
+    .cat-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- Products ---------- */
+  .products{padding:90px 0;background:var(--cream);}
+  .products.alt{background:var(--paper);}
+  .prod-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .prod-card{
+    background:var(--paper);border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--line-light);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .products.alt .prod-card{background:var(--cream);}
+  .prod-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(43,38,24,.12);}
+  .prod-photo{position:relative;aspect-ratio:1/1;overflow:hidden;background:#e7dcc4;}
+  .prod-photo img{width:100%;height:100%;object-fit:cover;}
+  .prod-badge{
+    position:absolute;top:12px;left:12px;
+    background:var(--clay);color:var(--paper);
+    font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:5px 10px;border-radius:999px;
+  }
+  .prod-body{padding:18px 18px 20px;}
+  .prod-mat{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--clay);font-weight:700;margin-bottom:6px;}
+  .prod-body h3{font-size:16px;margin-bottom:8px;}
+  .prod-price{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;}
+  .prod-price .now{font-weight:700;font-size:15px;}
+  .prod-price .was{font-size:13px;color:var(--text-soft);text-decoration:line-through;}
+  .prod-view{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;
+    transition:color .2s,border-color .2s;
+  }
+  .prod-view:hover{color:var(--clay);border-color:var(--clay);}
+  .prod-buy{
+    display:flex;align-items:center;justify-content:center;
+    margin-top:12px;padding:10px;
+    background:var(--ink);color:var(--cream);
+    font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    transition:background .2s;
+  }
+  .prod-buy:hover{background:var(--tan-dark);color:var(--paper);}
+  @media (max-width:880px){
+    .prod-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- Collab CTA ---------- */
+  .collab{
+    position:relative;color:var(--on-dark);padding:120px 0;text-align:center;
+    background:#14120c;
+  }
+  .collab-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.32;}
+  .collab-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,18,12,.6), rgba(20,18,12,.94));}
+  .collab .wrap{position:relative;max-width:720px;}
+  .collab .eyebrow{color:var(--tan);}
+  .collab h2{
+    font-size:clamp(26px,5vw,48px);color:var(--paper);
+    line-height:1.08;margin:16px 0 22px;
+  }
+  .collab p{font-size:16px;color:var(--on-dark-soft);line-height:1.7;max-width:540px;margin:0 auto 32px;}
+
+  /* ---------- Contact ---------- */
+  .contact{padding:90px 0;background:var(--paper);}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;}
+  .contact-card{
+    background:var(--ink);color:var(--on-dark);
+    border-radius:var(--radius);padding:38px 32px;
+  }
+  .contact-card h3{font-size:20px;color:var(--paper);margin-bottom:18px;}
+  .contact-line{display:flex;gap:14px;margin-bottom:18px;font-size:14px;line-height:1.6;color:var(--on-dark-soft);}
+  .contact-line svg{width:18px;height:18px;color:var(--tan);flex:none;margin-top:2px;}
+  .contact-line a{color:var(--on-dark);text-decoration:underline;text-decoration-color:var(--tan);}
+  .social-row{display:flex;gap:12px;margin-top:24px;}
+  .social-row a{
+    width:36px;height:36px;border-radius:50%;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--on-dark-soft);
+  }
+  .social-row a:hover{background:var(--tan);color:var(--ink);border-color:var(--tan);}
+  .social-row svg{width:16px;height:16px;}
+  .form-card{
+    background:var(--cream);border-radius:var(--radius);padding:36px 32px;
+  }
+  .form-card h3{font-size:20px;margin-bottom:6px;}
+  .form-card .sub-note{font-size:13.5px;color:var(--text-soft);margin-bottom:22px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);margin-bottom:7px;}
+  .field input, .field textarea{
+    width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line-light);
+    background:var(--paper);font-family:inherit;font-size:14px;color:var(--text);
+  }
+  .field textarea{resize:vertical;min-height:90px;}
+  .field input:focus, .field textarea:focus{outline:2px solid var(--tan);outline-offset:1px;}
+  @media (max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:70px 0 0;}
+  .foot-grid{
+    display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:36px;
+    padding-bottom:50px;border-bottom:1px solid var(--line);
+  }
+  .foot-brand img{height:40px;margin-bottom:16px;}
+  .foot-brand p{font-size:13.5px;line-height:1.7;max-width:280px;color:var(--on-dark-soft);}
+  .foot-col h4{
+    font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--paper);margin-bottom:18px;
+  }
+  .foot-col a{display:block;font-size:13.5px;margin-bottom:11px;color:var(--on-dark-soft);}
+  .foot-col a:hover{color:var(--tan);}
+  .foot-news input{
+    width:100%;padding:11px 14px;border-radius:999px 0 0 999px;border:1px solid var(--line);
+    background:var(--ink);color:var(--paper);font-size:13px;font-family:inherit;
+  }
+  .foot-news-row{display:flex;margin-top:6px;}
+  .foot-news-row button{
+    border-radius:0 999px 999px 0;border:1px solid var(--tan);background:var(--tan);color:var(--ink);
+    padding:0 18px;font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;
+  }
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+    padding:24px 0 28px;font-size:12px;color:var(--on-dark-soft);
+  }
+  .foot-bottom .policies{display:flex;gap:18px;flex-wrap:wrap;}
+  .foot-badge{
+    text-align:center;font-size:12px;padding:14px 0;color:var(--on-dark-soft);
+    border-bottom:1px solid var(--line);
+  }
+  .foot-badge b{color:var(--tan);}
+  @media (max-width:880px){
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .foot-grid{grid-template-columns:1fr;}
+  }
+
+  section{scroll-margin-top:70px;}
+</style>
+</head>
+<body>
+
+<div class="announce">COD available &nbsp;|&nbsp; <strong>Free shipping</strong> on orders above ₹1,800</div>
+
+<header class="site">
+  <div class="nav-inner">
+    <a href="#top" class="logo-link">
+      <img src="https://www.myog.in/cdn/shop/files/RGB_LOGO_T-8.png?v=1726673161&width=300" alt="My OG logo">
+    </a>
+    <nav class="links">
+      <a href="#top">Home</a>
+      <a href="#categories">OG Store</a>
+      <a href="#new">OG Essentials</a>
+      <a href="#process">Our Process</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <button aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button>
+      <button id="menuToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#top">Home</a>
+    <a href="#categories">OG Store</a>
+    <a href="#new">OG Essentials</a>
+    <a href="#process">Our Process</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ============ HERO (full background image, centered text) ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="hero-bestseller">Bestseller · Handcrafted in the Himalayas</span>
+    <div class="hero-badge"><img src="https://www.myog.in/cdn/shop/files/RGB_LOGO_T-8.png?v=1726673161&width=200" alt="My OG"></div>
+    <h1 class="display">HEMP<br><span class="accent">BAGS</span></h1>
+    <p class="sub">HEMP GOODS &amp; <span>ACCESSORIES</span></p>
+    <p class="tagline quote-font">"Allow the threads of God to be a part of your life" — directly from the Himalayas, designed in India.</p>
+    <div class="cta-row">
+      <a href="#new" class="btn btn-solid">Shop Now <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a href="#about" class="btn btn-dark">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-bar">
+  <div class="trust-bar-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c3 4 1 6-1 8-2 2-2 5 1 6 3-1 3-4 1-6 2 0 5 2 5 6a6 6 0 1 1-12 0c0-6 4-10 6-14z"/></svg>
+    <span><b>100%</b> Hemp &amp; Hemp-Cotton</span>
+  </div>
+  <div class="trust-bar-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    <span><b>1</b> Tree Planted / Order</span>
+  </div>
+  <div class="trust-bar-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l9 4v6c0 5.5-3.8 10.7-9 12C6.8 22.7 3 17.5 3 12V6z"/></svg>
+    <span><b>DPIIT</b> Recognised Startup</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT (slider) ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">About Us</p>
+      <h2 class="display">OUR STORY &amp; CRAFT</h2>
+    </div>
+
+    <div class="about-slider-outer" id="aboutSlider">
+      <div class="about-track" id="aboutTrack">
+
+        <!-- Slide 1: Who We Are -->
+        <div class="about-slide">
+          <div class="about-card">
+            <p class="eyebrow">Who We Are</p>
+            <h2 class="display" style="font-size:clamp(22px,3vw,30px);">BORN FROM PURPOSE</h2>
+            <p>My OG is the name of an environmentally conscious brand yielding artisan-made and ethically sourced products. Following our vision to make a difference organically, we look forward to paying back what the environment has offered us so far.</p>
+            <p>With every purchase of yours, My OG plants a tree — our way of gifting nature something back, the small act that has given meaning to our brand.</p>
+            <a href="#categories" class="btn btn-light">View Products <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+          <div class="about-photo">
+            <img src="https://www.myog.in/cdn/shop/files/image_2.webp?v=1726398748&width=1200" alt="My OG hemp craftsmanship">
+          </div>
+        </div>
+
+        <!-- Slide 2: The Origin Story -->
+        <div class="about-slide">
+          <div class="about-card">
+            <p class="eyebrow">Our Origin</p>
+            <h2 class="display" style="font-size:clamp(22px,3vw,30px);">FROM THE HIMALAYAS</h2>
+            <p>It all started when three men set out to bring back the lost name of the mythical, magical plant — Hemp. The idea of "OG" hadn't even struck their minds yet. It was a trip to Nepal that changed the way they saw it.</p>
+            <p>The world was using hemp, but their own country, despite being among its first originators, largely wasn't. They came back with a mission: to bring hemp back home — and to do it right.</p>
+            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:16px;">"Hemp is hope, not dope."</p>
+            <a href="#categories" class="btn btn-light">View Products <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+          <div class="about-photo">
+            <img src="https://www.myog.in/cdn/shop/files/image_6.webp?v=1726403446&width=1200" alt="From the Himalayas with purpose">
+          </div>
+        </div>
+
+        <!-- Slide 3: Our Craft & Materials -->
+        <div class="about-slide">
+          <div class="about-card">
+            <p class="eyebrow">Our Craft</p>
+            <h2 class="display" style="font-size:clamp(22px,3vw,30px);">HAND-STITCHED WITH LOVE</h2>
+            <p>Every My OG product is crafted by skilled artisans from Nepal and India. We use only 100% Hemp and Hemp-Cotton blends — natural, durable, and biodegradable materials that are kind to the planet.</p>
+            <p>From the raw fibre grown in the fields to the finished bag on your shoulder, each step is guided by our commitment to quality, sustainability, and the people behind the craft.</p>
+            <a href="#process" class="btn btn-light">See Our Process <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+          <div class="about-photo">
+            <img src="https://www.myog.in/cdn/shop/files/Artboard_6_5592e882-0e7b-4e10-bca4-d2243194d558.webp?v=1726398285&width=1200" alt="Hand-stitched hemp bags">
+          </div>
+        </div>
+
+        <!-- Slide 4: Our Commitment -->
+        <div class="about-slide">
+          <div class="about-card">
+            <p class="eyebrow">Our Commitment</p>
+            <h2 class="display" style="font-size:clamp(22px,3vw,30px);">A GREENER TOMORROW</h2>
+            <p>We are DPIIT-recognised under the Startup India Program — a testament to our vision of building a business that is as good for the planet as it is for people.</p>
+            <p>Hemp requires no pesticides, enriches the soil it grows in, and absorbs more CO₂ per acre than most plants. Every bag you carry is a statement — that style and sustainability can go hand in hand.</p>
+            <p>One bag. One tree. One step closer to a greener world.</p>
+            <a href="#new" class="btn btn-light">Shop Now <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+          <div class="about-photo">
+            <img src="https://www.myog.in/cdn/shop/files/Artboard10.jpg?v=1734115445&width=1200" alt="Sustainable hemp commitment">
+          </div>
+        </div>
+
+      </div><!-- /about-track -->
+    </div><!-- /about-slider-outer -->
+
+    <!-- Slider navigation -->
+    <div class="about-nav">
+      <button id="aboutPrev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="about-dots" id="aboutDots">
+        <button class="about-dot active" data-idx="0" aria-label="Slide 1"></button>
+        <button class="about-dot" data-idx="1" aria-label="Slide 2"></button>
+        <button class="about-dot" data-idx="2" aria-label="Slide 3"></button>
+        <button class="about-dot" data-idx="3" aria-label="Slide 4"></button>
+      </div>
+      <button id="aboutNext" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="perks">
+      <div class="perk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="14" height="9"/><path d="M16 10h3l3 3v3h-6"/><circle cx="7" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
+        <p>Free Shipping<span>On orders above ₹1,800</span></p>
+      </div>
+      <div class="perk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l3-3 4 4 8-8 3 3"/><path d="M3 19h18"/></svg>
+        <p>Cash On Delivery<span>Available across India</span></p>
+      </div>
+      <div class="perk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
+        <p>Ethically Sourced<span>Artisan-made, Nepal &amp; India</span></p>
+      </div>
+      <div class="perk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c3 4 1 6-1 8-2 2-2 5 1 6 3-1 3-4 1-6 2 0 5 2 5 6a6 6 0 1 1-12 0c0-6 4-10 6-14z"/></svg>
+        <p>We Plant A Tree<span>With every order placed</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section class="story">
+  <div class="story-bg" style="background-image:url('https://www.myog.in/cdn/shop/files/image_6.webp?v=1726403446&width=1600');"></div>
+  <div class="wrap">
+    <p class="eyebrow">Our Story</p>
+    <h2 class="display">FROM THE HIMALAYAS, WITH PURPOSE</h2>
+    <blockquote>It all started when three men set out to bring back the lost name of the mythical, magical plant — Hemp. The idea of "OG" hadn't even struck their minds yet. It was a trip to Nepal that changed the way they saw it: the world was using hemp, but their own country, despite being among its first originators, largely wasn't.</blockquote>
+    <p class="motto">"Hemp is hope, not dope."</p>
+    <a href="#categories" class="btn btn-dark">View Products <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Fibre To Favourite</p>
+      <h2 class="display">OUR PROCESS</h2>
+      <p>Six stages turn a hemp stalk grown in the field into the bag on your shoulder — every step chosen for the lightest possible footprint.</p>
+    </div>
+    <div class="stitch-row">
+      <div class="step">
+        <div class="node">1</div>
+        <h3>Cultivation &amp; Harvest</h3>
+        <p>Hemp plants grow for 4–5 months before the stalks are cut close to the ground at maturity. Seeds and flowers are set aside for other uses.</p>
+      </div>
+      <div class="step">
+        <div class="node">2</div>
+        <h3>Retting</h3>
+        <p>Stalks break down through dew, water, chemical or enzymatic retting — releasing the natural pectins that bind the fibres together.</p>
+      </div>
+      <div class="step">
+        <div class="node">3</div>
+        <h3>Decortication</h3>
+        <p>Dried stalks are crushed and beaten so rollers and breakers can separate the woody core from the usable bast fibre.</p>
+      </div>
+      <div class="step">
+        <div class="node">4</div>
+        <h3>Crafting</h3>
+        <p>Skilled hands weave the fibre into durable fabric, then cut and stitch it into the shape of your next favourite bag.</p>
+      </div>
+      <div class="step">
+        <div class="node">5</div>
+        <h3>Packaging</h3>
+        <p>Every bag is packed with care, so it reaches your doorstep exactly as it left the workshop.</p>
+      </div>
+      <div class="step">
+        <div class="node">6</div>
+        <h3>Delivering</h3>
+        <p>Your journey with us begins the moment your new hemp bag arrives — ready to be your everyday companion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="categories" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Shop By Category</p>
+      <h2 class="display">OUR CATEGORIES</h2>
+    </div>
+    <div class="cat-row">
+      <a class="cat-card" href="https://www.myog.in/collections/all">
+        <img src="https://www.myog.in/cdn/shop/files/Artboard4_ee51ac06-6be8-483a-950f-f1f5941906fe.webp?v=1726314793&width=500" alt="Sling bags">
+        <div class="cat-info"><h3>Sling Bags</h3><span>View Products →</span></div>
+      </a>
+      <a class="cat-card" href="https://www.myog.in/collections/all">
+        <img src="https://www.myog.in/cdn/shop/files/Artboard_6_5592e882-0e7b-4e10-bca4-d2243194d558.webp?v=1726398285&width=500" alt="Backpacks">
+        <div class="cat-info"><h3>Backpacks</h3><span>View Products →</span></div>
+      </a>
+      <a class="cat-card" href="https://www.myog.in/collections/all">
+        <img src="https://www.myog.in/cdn/shop/files/Artboard10.jpg?v=1734115445&width=500" alt="Office &amp; tote bags">
+        <div class="cat-info"><h3>Office &amp; Tote</h3><span>View Products →</span></div>
+      </a>
+      <a class="cat-card" href="https://www.myog.in/collections/essentials">
+        <img src="https://www.myog.in/cdn/shop/files/4_optimized.png?v=1740806423&width=500" alt="Purses &amp; pouches">
+        <div class="cat-info"><h3>Purses &amp; Pouches</h3><span>View Products →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEW PRODUCTS ============ -->
+<section class="products" id="new">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Best Sellers</p>
+      <h2 class="display">NEW PRODUCTS</h2>
+    </div>
+    <div class="prod-row">
+      <div class="prod-card">
+        <div class="prod-photo"><span class="prod-badge">Bestseller</span><img src="https://www.myog.in/cdn/shop/files/Artboard4_ee51ac06-6be8-483a-950f-f1f5941906fe.webp?v=1726314793&width=500" alt="OG Reiek"></div>
+        <div class="prod-body">
+          <p class="prod-mat">30% Hemp Cotton</p>
+          <h3>OG Reiek</h3>
+          <div class="prod-price"><span class="now">₹1,849</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-reiek">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><img src="https://www.myog.in/cdn/shop/files/Artboard_6_5592e882-0e7b-4e10-bca4-d2243194d558.webp?v=1726398285&width=500" alt="OG Ikigai"></div>
+        <div class="prod-body">
+          <p class="prod-mat">100% Hemp Blend</p>
+          <h3>OG Ikigai</h3>
+          <div class="prod-price"><span class="now">₹2,749</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-ikigai">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><img src="https://www.myog.in/cdn/shop/files/Artboard8.webp?v=1726314863&width=500" alt="OG Kabru"></div>
+        <div class="prod-body">
+          <p class="prod-mat">50% Hemp Cotton</p>
+          <h3>OG Kabru</h3>
+          <div class="prod-price"><span class="now">₹2,449</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-kabru">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><span class="prod-badge">Sale</span><img src="https://suspire.in/cdn/shop/files/og_berg_2.0_1400x.png?v=1758606200" alt="OG Berg 2.0"></div>
+        <div class="prod-body">
+          <p class="prod-mat">50% Hemp Cotton</p>
+          <h3>OG Berg 2.0</h3>
+          <div class="prod-price"><span class="now">₹1,349</span><span class="was">₹1,799</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-berg">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PRODUCTS ============ -->
+<section class="products alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">More Designs For You</p>
+      <h2 class="display">FEATURED PRODUCTS</h2>
+    </div>
+    <div class="prod-row">
+      <div class="prod-card">
+        <div class="prod-photo"><span class="prod-badge">Sale</span><img src="https://www.myog.in/cdn/shop/files/Artboard10.jpg?v=1734115445&width=500" alt="OG Shiro"></div>
+        <div class="prod-body">
+          <p class="prod-mat">100% Hemp · 3-in-1</p>
+          <h3>OG Shiro</h3>
+          <div class="prod-price"><span class="now">₹2,499</span><span class="was">₹2,799</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-shiro">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><span class="prod-badge">Sale</span><img src="https://www.myog.in/cdn/shop/files/4_optimized.png?v=1740806423&width=500" alt="OG Purse"></div>
+        <div class="prod-body">
+          <p class="prod-mat">Hemp Card &amp; Cash Purse</p>
+          <h3>OG Purse</h3>
+          <div class="prod-price"><span class="now">₹549</span><span class="was">₹899</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-purse">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><span class="prod-badge">Sale</span><img src="https://www.myog.in/cdn/shop/files/Artboard8_8a55c71a-d073-4b17-878e-81e090446815.webp?v=1726315032&width=500" alt="OG Ukiyo"></div>
+        <div class="prod-body">
+          <p class="prod-mat">Patchwork Hemp &amp; Cotton</p>
+          <h3>OG Ukiyo</h3>
+          <div class="prod-price"><span class="now">₹1,849</span><span class="was">₹2,099</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-ukiyo">Buy Now</a>
+      </div>
+      <div class="prod-card">
+        <div class="prod-photo"><img src="https://www.myog.in/cdn/shop/files/Artboard4_aaffea89-dfad-437c-819a-9cc812f86b3b.webp?v=1726314905&width=500" alt="OG Blossom"></div>
+        <div class="prod-body">
+          <p class="prod-mat">30% Hemp / 70% Cotton</p>
+          <h3>OG Blossom</h3>
+          <div class="prod-price"><span class="now">₹1,949</span></div>
+          <a class="prod-view" href="#categories">View Product →</a>
+        </div>
+        <a class="prod-buy" href="product.html?id=og-blossom">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLLAB CTA ============ -->
+<section class="collab">
+  <div class="collab-bg" style="background-image:url('https://www.myog.in/cdn/shop/files/image_3.webp?v=1726399070&width=1600');"></div>
+  <div class="wrap">
+    <p class="eyebrow">Partner With Us</p>
+    <h2 class="display">LET'S BUILD SOMETHING SUSTAINABLE — TOGETHER</h2>
+    <p>Whether you're a retailer, designer, or fellow entrepreneur, we believe the best creations come from meaningful partnerships. Bring your vision, and let's craft hemp goods that leave a lasting impression — for people and the planet.</p>
+    <a href="#contact" class="btn btn-dark">Let's Talk <span class="arrow-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Be Part Of Our Community</p>
+      <h2 class="display">GET IN TOUCH</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="form-card">
+        <h3>Send us a message</h3>
+        <p class="sub-note">We'll get back to you as soon as possible.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks for contacting us. We will get back to you as soon as possible.');">
+          <div class="field"><label for="cname">Name</label><input id="cname" type="text" placeholder="Your name"></div>
+          <div class="field"><label for="cemail">Email *</label><input id="cemail" type="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="cphone">Phone number</label><input id="cphone" type="tel" placeholder="+91"></div>
+          <div class="field"><label for="ccomment">Comment</label><textarea id="ccomment" placeholder="Tell us what you need..."></textarea></div>
+          <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center;">Send</button>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>Original Morph Pvt. Ltd.</h3>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>House No. 40, Sankardev Nagar Path, Hengrabari, Guwahati – 781006, Assam, India.<br>Landmark — near DC Guest House, Hengrabari Housing Colony.</span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.32 1.9.57 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.14a2 2 0 0 1 2.11-.45c.91.25 1.85.44 2.81.57A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:8944093556">+91 89440 93556</a></span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l9 6 9-6"/></svg>
+          <span><a href="mailto:og.verve@gmail.com">og.verve@gmail.com</a></span>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          <span>DPIIT-recognised under the Startup India Program.</span>
+        </div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/my_ogofficial/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.facebook.com/myogofficialpage" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14V9a1 1 0 0 1 1-1z"/></svg></a>
+          <a href="https://twitter.com/Origina19273448" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="https://in.pinterest.com/myogofficial/" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9 19c1-3 1.6-5.4 2-7M12 8c2.5 0 4 1.3 4 3.3 0 2.4-1.4 4.2-3.4 4.2-.9 0-1.6-.5-1.9-1.2"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<div class="foot-badge">My Original is recognised as a startup by <b>DPIIT</b> under the <b>Startup India</b> Program.</div>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="https://www.myog.in/cdn/shop/files/RGB_LOGO_T-8.png?v=1726673161&width=260" alt="My OG">
+        <p>Artisan-made, ethically sourced hemp bags and accessories — designed in India, crafted from the threads of the Himalayas. With every purchase, My OG plants a tree.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="#top">Home</a>
+        <a href="https://www.myog.in/collections/all">OG Store</a>
+        <a href="https://www.myog.in/collections/essentials">OG Essentials</a>
+        <a href="#process">Our Process</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Categories</h4>
+        <a href="https://www.myog.in/collections/all">Sling Bags</a>
+        <a href="https://www.myog.in/collections/all">Backpacks</a>
+        <a href="https://www.myog.in/collections/all">Office &amp; Tote Bags</a>
+        <a href="https://www.myog.in/collections/essentials">Purses &amp; Pouches</a>
+      </div>
+      <div class="foot-col foot-news">
+        <h4>Newsletter</h4>
+        <p style="font-size:13px;margin-bottom:10px;color:var(--on-dark-soft);">New arrivals, discounts &amp; promotions — straight to your inbox.</p>
+        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+          <div class="foot-news-row">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 My Originals. All rights reserved.</span>
+      <div class="policies">
+        <a href="https://www.myog.in/policies/terms-of-service">Terms of Service</a>
+        <a href="https://www.myog.in/policies/privacy-policy">Privacy Policy</a>
+        <a href="https://www.myog.in/policies/refund-policy">Refund Policy</a>
+        <a href="https://www.myog.in/policies/shipping-policy">Shipping Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---- Open all external links in a new tab ---- */
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+
+  /* ---- Mobile nav ---- */
+  const toggle = document.getElementById('menuToggle');
+  const drawer = document.getElementById('mobileDrawer');
+  toggle.addEventListener('click', () => drawer.classList.toggle('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+
+  /* ---- About slider ---- */
+  const track = document.getElementById('aboutTrack');
+  const dots = document.querySelectorAll('.about-dot');
+  const slides = document.querySelectorAll('.about-slide');
+  let current = 0;
+  let startX = 0;
+  let isDragging = false;
+
+  function goTo(idx) {
+    current = (idx + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.getElementById('aboutPrev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('aboutNext').addEventListener('click', () => goTo(current + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => goTo(parseInt(dot.dataset.idx))));
+
+  /* Swipe / touch support */
+  const slider = document.getElementById('aboutSlider');
+  slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isDragging = true; }, {passive:true});
+  slider.addEventListener('touchend', e => {
+    if (!isDragging) return;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+    isDragging = false;
+  });
+
+  /* Mouse drag support */
+  slider.addEventListener('mousedown', e => { startX = e.clientX; isDragging = true; });
+  slider.addEventListener('mouseup', e => {
+    if (!isDragging) return;
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 60) goTo(diff > 0 ? current + 1 : current - 1);
+    isDragging = false;
+  });
+  slider.addEventListener('mouseleave', () => { isDragging = false; });
+
+  /* Auto-advance every 6 seconds */
+  setInterval(() => goTo(current + 1), 6000);
+</script>
+
+</body>
+</html>
